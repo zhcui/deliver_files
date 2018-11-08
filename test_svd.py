@@ -1,5 +1,13 @@
 #! /usr/bin/env python
+import numpy as np
 import numpy.linalg as la
+
+
+a = np.arange(30).reshape((6,5))
+u, s, vt = la.svd(a)
+print s
+exit()
+
 
 rho1 = np.load('./rho1.npy')
 u1, s1, vt1 = la.svd(rho1, full_matrices = False)
@@ -10,16 +18,14 @@ print la.norm(rho1-rho2)
 print la.norm(s1-s2)
 print la.norm(vt1-vt2)
 
-
-XXXX---
-
-
-
 print s1
 print s2
 print vt1.shape
 print vt2.shape
 
+for i in xrange(vt1.shape[0]):
+    print i
+    print la.norm(vt1[i] - vt2[i])
 
 #print vt1[22]
 #print vt2[22]
