@@ -33,8 +33,10 @@ print "renomalization"
 
 print la.norm(rho1_re - rho2_re)
 
-u3, s3, vt3 = la.svd(rho1_re, full_matrices = False)
-u4, s4, vt4 = la.svd(rho2_re, full_matrices = False)
+
+pewewey
 print la.norm(s3-s4)
+QQQ
+
 print la.norm(vt3-vt4)
-print vt3[-1]
+print vt3[-1] # use
